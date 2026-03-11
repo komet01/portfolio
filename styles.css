@@ -1,11 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: powderblue;
+    font-family: "Nunito";
+    font-weight: 300;
+    /* font-size: 16px; */
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
 }
 
 h1 {
-    color: blue;
+    color: #25343F;
+    font-family: "Nunito";
+    /* stroke: rgb(255, 255, 255);
+    stroke-width: 15; */
 }
 
 p {
-    color: red;
+    color: #797f85;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    /* background: linear-gradient(180deg, rgba(173, 173, 173, 1) 0%, rgba(120, 144, 150, 1) 100%); */
+    background: #EAEFEF;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 15px 25px;
+    background: #FF9B51;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+header nav {
+    position: relative;
+    top: 8px;
+    /* padding-top: 90%; */
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+header nav ul li a {
+    color: black;
+    position: relative;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 15px;
+    position: relative;
+    left: 12.5%;
+}
+
+header nav ul li.active {
+    text-shadow: 0px 0px 5px #ffffff;
+}
+
+header nav ul li:not(.active) a {
+    transition: border-bottom 50ms ease-out;
+}
+
+header nav ul li:not(.active) a:hover {
+    border-bottom: 5px solid #434343;
+    width: 90%;
+}
+
+.hero {
+    /* padding-bottom: 100px; */
+    position: relative;
+}
+
+.hero--info {
+    width: 100%;
+    margin: 50px 50px;
+    padding: 25px;
+    background: #f7fcff;
+    box-shadow: 0px 0px 15px #25343F;
+    border: solid 5px #25343F;
+}
+
+.hero--info h1 {
+    color: #25343F;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.hero--info p {
+    color: #25343F;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.aboutme {
+    padding-bottom: 500px;
+    position: relative;
+}
+
+.aboutme--info {
+    width: 50%;
+    /* height: ; */
+    margin: 50px 50px;
+    padding: 25px;
+    background: #f7fcff;
+    box-shadow: 0px 0px 15px #25343F;
+    border: solid 5px #25343F;
+}
+
+.aboutme--info h1 {
+    color: #25343F;
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.aboutme--info p {
+    color: #25343F;
+    font-size: 20px;
+    font-weight: 400;
 }
