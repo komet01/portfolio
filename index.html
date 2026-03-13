@@ -12,14 +12,15 @@
 <body>
     <div class="wrapper">
         <header>
-            <!-- <h1>Hello World, this is my first web page.</h1> -->
+            <!-- <h1>Hello World, this is my first web page.</h1> class="active"><a -->
             <nav>
                 <ul>
-                    <li class="active"><a href="#aboutme">About Me</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Commissions</a></li>
                     <li><a href="#">Silly stuff!</a></li>
                 </ul>
+                <button class="open-menu-button">≡</button>
             </nav>
             <span class="logo">Komet01</span>
         </header>
@@ -27,29 +28,61 @@
             <div class="hero--info">
                 <h1>Hello!</h1>
                 <p>Welcome to my page!</p>
+                <small><i>the images you see were all taken by me</i></small>
                 <!-- <button class="btn">Learn more about me</button> -->
             </div>
         </div>
-        <div class="aboutme container" id="aboutme">
-            <div class="aboutme--info">
-                <h1>About me</h1>
-                <p>My internet pseudonyme is Komet01 (a.k.a komet01DASH).<br>I was born in Ukraine, Kryvyi Rih city, and
-                    currently still living in here. I'm interested in space and i enjoy hiking in forests and mountains.
-                    My hobbies are drawing and programming! </p>
-                <!-- <button class="btn">Learn more about me</button> -->
+        <main>
+            <div class="bglayout">
+                <img class="bg1" src="images/crimea.png">
+                <div class="aboutme container" id="aboutme">
+                    <ul>
+                        <li>
+                            <div class="aboutme--info">
+                                <h1>About me</h1>
+                                <p>My internet pseudonyme is Komet01 (a.k.a komet01DASH).<br>I was born in Ukraine,
+                                    Kryvyi Rih
+                                    city,
+                                    and
+                                    currently still living in here. I'm interested in space and i enjoy hiking in
+                                    forests and
+                                    mountains.
+                                    My hobbies are drawing and programming!<br><br>Graduated art school when i was 14.
+                                    Took me 6
+                                    years.
+                                </p>
+                                <!-- <button class="btn">Learn more about me</button> -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="aboutme--links">
+                                <ul>
+                                    <li>
+                                        <img class="icon-link" src="images/discord.png"></img>
+                                        <h3>komet01</h3>
+                                    </li>
+                                    <li>
+                                        <img class="icon-link" src="images/telegram.png"></img>
+                                        <h3>komet01tg</h3>
+                                    </li>
+                                    <li>
+                                        <img class="icon-link" src="images/youtube.png"></img>
+                                        <h3>komet01yt</h3>
+                                    </li>
+                                </ul>
+                                <!-- <button class="btn">Learn more about me</button> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                </img>
             </div>
-            <div class="aboutme--links">
-                <ul>
-                    <li>komet01</li>
-                    <li>komet01tg</li>
-                    <li>komet01yt</li>
-                </ul>
-                <!-- <button class="btn">Learn more about me</button> -->
-            </div>
-        </div>
-        <div class="container big-text">
+        </main>
+
+        <script src="script.js"></script>
+        <!-- <div class="container big-text">
             <p>hii</p>
-        </div>
+        </div> -->
     </div>
 </body>
 

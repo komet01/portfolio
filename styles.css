@@ -43,8 +43,12 @@ img {
 }
 
 header {
+    position: fixed;
     padding: 15px 25px;
     background: #FF9B51;
+    z-index: 3;
+    width: 100%;
+    top: 0;
 }
 
 header .logo {
@@ -56,20 +60,22 @@ header .logo {
 header nav {
     position: relative;
     top: 8px;
+    right: 50px;
     /* padding-top: 90%; */
     float: right;
     width: 50%;
 }
 
 header nav ul {
-    list-style: none;
+    /* list-style: none; */
     display: flex;
+    /* align-items: center; */
     justify-content: space-between;
-    position: relative;
+    /* position: relative; */
 }
 
 header nav ul li {
-    display: inline-block;
+    display: block;
     position: relative;
 }
 
@@ -78,6 +84,7 @@ header nav ul li a {
     position: relative;
 }
 
+/* 
 header nav ul li.active::after {
     content: '';
     display: block;
@@ -87,19 +94,41 @@ header nav ul li.active::after {
     border-radius: 15px;
     position: relative;
     left: 12.5%;
-}
+} */
 
-header nav ul li.active {
+/* header nav ul li.active {
     text-shadow: 0px 0px 5px #ffffff;
-}
+} */
 
-header nav ul li:not(.active) a {
+header nav ul li a {
     transition: border-bottom 50ms ease-out;
 }
 
-header nav ul li:not(.active) a:hover {
+header nav ul li a:hover {
     border-bottom: 5px solid #434343;
     width: 90%;
+}
+
+.bg1 {
+    opacity: 0.5;
+    /* background: #000000; */
+    position: absolute;
+    /* width: 100%; */
+    min-width: 1000px;
+    /* top: 265px; */
+    top: -40px;
+    clip-path: polygon(0 40px, 100% 40px, 100% 540px, 0 540px);
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+.bglayout {
+    background: #25343F;
+    position: relative;
+    height: 500px;
+    /* top: 50px; */
+    /* clip-path: polygon(0 120px, 100% 120px, 100% 800px, 0 800px); */
 }
 
 .hero {
@@ -129,18 +158,30 @@ header nav ul li:not(.active) a:hover {
 }
 
 .aboutme {
-    padding-bottom: 500px;
+    /* padding-bottom: 500px; */
+    /* top: 50px; */
     position: relative;
+    /* display: inline-block; */
+}
+
+.aboutme li {
+    display: inline-flex;
+    justify-content: space-between;
+    /* align-self: center; */
 }
 
 .aboutme--info {
-    width: 50%;
-    /* height: ; */
-    margin: 50px 50px;
+    width: 70%;
+    /* height: 340px; */
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
     padding: 25px;
     background: #f7fcff;
     box-shadow: 0px 0px 15px #25343F;
     border: solid 5px #25343F;
+    max-width: 400px;
+    /* max-height: 340px; */
 }
 
 .aboutme--info h1 {
@@ -154,4 +195,104 @@ header nav ul li:not(.active) a:hover {
     color: #25343F;
     font-size: 20px;
     font-weight: 400;
+}
+
+.aboutme--links {
+    position: relative;
+    /* display: inline-block; */
+    /* top: -450px; */
+    /* left: 60%; */
+    /* padding-top: 90%; */
+    /* float: middle; */
+    justify-content: space-between;
+    width: 150px;
+    /* height: ; */
+    margin: 50px 50px;
+    padding: 10px;
+    background: #f7fcff;
+    box-shadow: 0px 0px 15px #25343F;
+    border: solid 5px #25343F;
+    max-width: 400px;
+}
+
+.aboutme--links ul {
+    /* list-style: none; */
+    /* left: 10px; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    position: relative;
+}
+
+.icon-link {
+    width: 25px;
+    height: 25px;
+    padding: 0 5px;
+    /* top: 5px; */
+    /* left: 50px; */
+    /* align-self: center; */
+    /* display: flex; */
+}
+
+.aboutme--links ul li {
+    /* display: ; */
+    /* position: relative; */
+    display: inline-flex;
+    justify-content: space-between;
+    /* text-align: center; */
+}
+
+@media screen and (max-width: 900px) {
+
+    header nav .open-menu-button {
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    header nav {
+        display: block;
+        position: fixed;
+        background: white;
+        /* top: 8px; */
+        /* padding-top: 90%; */
+        /* float: right; */
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        /* display: flex; */
+        /* align-items: center; */
+        /* flex-direction: column; */
+    }
+
+    header nav ul {
+        /* display: block; */
+        position: fixed;
+        /* background: white; */
+        /* top: 8px; */
+        /* padding-top: 90%; */
+        /* float: right; */
+        left: 0;
+        top: 25%;
+        width: 300px;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* header nav ul li { */
+    /* display: block; */
+    /* position: relative; */
+    /* background: white; */
+    /* top: 8px; */
+    /* padding-top: 90%; */
+    /* float: right; */
+    /* left: 0; */
+    /* top: 0; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* } */
 }
